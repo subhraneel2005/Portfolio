@@ -3,6 +3,8 @@ import { NavBarr } from "@/components/NavBarr";
 import { BackgroundGradientAnimation } from "../components/ui/background-gradient-animation";
 import { TextGenerateEffect } from "../components/ui/text-generate-effect";
 import { BackgroundBeams } from "@/components/ui/background-beams";
+import AboutUs from "@/components/AboutUs";
+import Card from "@/components/Card";
 
 
 export default function Home() {
@@ -22,7 +24,9 @@ export default function Home() {
         </h1>
         <p className="text-xl md:text-3xl bg-gradient-to-r text-transparent from-blue-300/90 to-purple-500/60 bg-clip-text px-5">At Brandify, we craft modern websites and strategic branding to make your brand shine online</p>
       </div>
-      </div>
+    </div>
+    <Card/>
+    <AboutUs/>
       <BackgroundBeams/>
     </>
   );
