@@ -8,6 +8,8 @@ import AboutUs from '@/components/AboutUs';
 import Services from '@/components/Services';
 import Portfolio from '@/components/Portfolio';
 import ContactUs from '@/components/ContactUs';
+import { Link } from 'react-scroll';
+import Navbar from '@/components/Navbar';
 
 export default function Home(){
 
@@ -23,24 +25,9 @@ export default function Home(){
   },[])
 
   return (
-    <div className="font-sans antialiased bg-gray-100">
-      <header className="bg-gradient-to-r from-slate-700 to-slate-900 shadow">
-        <div className="container mx-auto px-4 py-6 flex justify-between items-center">
-          <h1 className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-purple-400">
-            Brandify
-          </h1>
-          <nav>
-            <ul className="flex space-x-4">
-              <li><a href="#services" className="text-white hover:text-gray-300">Services</a></li>
-              <li><a href="#portfolio" className="text-white hover:text-gray-300">Portfolio</a></li>
-              <li><a href="#about" className="text-white hover:text-gray-300">About Us</a></li>
-              <li><a href="#contact" className="text-white hover:text-gray-300">Contact</a></li>
-            </ul>
-          </nav>
-        </div>
-      </header>
-
-      <main>
+    <div className="font-sans antialiased bg-gray-100 absolute">
+      <Navbar/>
+      <main className="mt-20">
         <HeroSection />
         <AboutUs />
         <Services />

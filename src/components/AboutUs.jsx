@@ -4,7 +4,7 @@ import React from 'react';
 
 const AboutUs = () => {
   return (
-    <section className="bg-gradient-to-r from-gray-800 to-black py-20 text-white">
+    <section id="about" className="bg-gradient-to-r from-gray-800 to-black py-20 text-white">
       <div className="container mx-auto px-4">
         <h2 className="text-4xl font-extrabold text-center mb-8">About Us</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">

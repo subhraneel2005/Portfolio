@@ -4,7 +4,7 @@ import React from 'react';
 
 const HeroSection = () => {
   return (
-    <section className="bg-gradient-to-r from-sky-900 to-purple-800 py-20 text-white min-h-screen w-full">
+    <section id="hero" className="bg-gradient-to-r from-sky-900 to-purple-800 py-20 text-white min-h-screen w-full">
       <div className="container mx-auto px-4 text-center">
         <h1 className="text-5xl font-extrabold mb-6">
           Grow Your Business Online with Brandify
