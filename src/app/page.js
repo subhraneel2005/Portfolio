@@ -1,33 +1,64 @@
+// components/HomePage.js
 "use client"
-import { NavBarr } from "@/components/NavBarr";
-import { BackgroundGradientAnimation } from "../components/ui/background-gradient-animation";
-import { TextGenerateEffect } from "../components/ui/text-generate-effect";
-import { BackgroundBeams } from "@/components/ui/background-beams";
-import AboutUs from "@/components/AboutUs";
-import Card from "@/components/Card";
+import React,{useEffect} from 'react';
+import { FaLinkedin, FaTwitter, FaGithub, FaFacebook } from 'react-icons/fa';
+import Lenis from 'lenis';
+import HeroSection from '@/components/HeroSection';
+import AboutUs from '@/components/AboutUs';
+import Services from '@/components/Services';
+import Portfolio from '@/components/Portfolio';
+import ContactUs from '@/components/ContactUs';
 
+export default function Home(){
 
-export default function Home() {
+  useEffect(() => {
+    const lenis = new Lenis()
 
-  const words = `At Brandify, we specialize in enhancing your business's online presence through sleek, personalized websites and strategic branding. Our mission is to help you attract more customers by creating modern, premium websites that reflect your unique identity and values. With a focus on quality and innovation, we are dedicated to making your brand stand out in the digital world.
+    function raf(time) {
+      lenis.raf(time)
+      requestAnimationFrame(raf)
+    }
 
-  This name and bio aim to convey a modern, professional, and innovative approach to web development and personal branding
-`;
+    requestAnimationFrame(raf)
+  },[])
 
   return (
-   <>
-    <NavBarr/>
-    <div className="h-screen w-full z-40 inset-0 flex items-center justify-center text-white font-bold text-4xl text-center md:text-4xl lg:text-7xl">
-      <div className="block space-y-6">
-        <h1 className="bg-clip-text text-transparent drop-shadow-2xl bg-gradient-to-b from-purple-200 to-emerald-400/50 text-center">
+    <div className="font-sans antialiased bg-gray-100">
+      <header className="bg-gradient-to-r from-slate-700 to-slate-900 shadow">
+        <div className="container mx-auto px-4 py-6 flex justify-between items-center">
+          <h1 className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-purple-400">
             Brandify
-        </h1>
-        <p className="text-xl md:text-3xl bg-gradient-to-r text-transparent from-blue-300/90 to-purple-500/60 bg-clip-text px-5">At Brandify, we craft modern websites and strategic branding to make your brand shine online</p>
-      </div>
+          </h1>
+          <nav>
+            <ul className="flex space-x-4">
+              <li><a href="#services" className="text-white hover:text-gray-300">Services</a></li>
+              <li><a href="#portfolio" className="text-white hover:text-gray-300">Portfolio</a></li>
+              <li><a href="#about" className="text-white hover:text-gray-300">About Us</a></li>
+              <li><a href="#contact" className="text-white hover:text-gray-300">Contact</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+
+      <main>
+        <HeroSection />
+        <AboutUs />
+        <Services />
+        <Portfolio />
+        <ContactUs />
+      </main>
+
+      <footer className="bg-gray-800 py-6">
+        <div className="container mx-auto px-4 text-center text-gray-400">
+          <div className="flex justify-center space-x-4">
+            <a href="https://www.linkedin.com/in/subhraneel-goswami-599931282/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white"><FaLinkedin size={24} /></a>
+            <a href="https://x.com/Subhraneel55545" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white"><FaTwitter size={24} /></a>
+            <a href="https://github.com/subhraneel2005" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white"><FaGithub size={24} /></a>
+            <a href="https://www.facebook.com/profile.php?id=61560144223471" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white"><FaFacebook size={24} /></a>
+          </div>
+          <p className="mt-4">&copy; {new Date().getFullYear()} Brandify. All rights reserved.</p>
+        </div>
+      </footer>
     </div>
-    <Card/>
-    <AboutUs/>
-      <BackgroundBeams/>
-    </>
   );
 }

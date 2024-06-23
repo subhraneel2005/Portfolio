@@ -1,26 +1,47 @@
-import React from 'react'
-import threadsImg from "../../public/threads.png"
-import moodMate from "../../public/cafeCorner.png"
-import Image from 'next/image'
+// src/components/AboutUs.js
 
-function AboutUs() {
+import React from 'react';
+
+const AboutUs = () => {
   return (
-    <>
-    <div className="min-h-screen w-full flex justify-center items-center space-y-7">
-        <div className="md:flex block md:gap-3 space-y-3 md:justify-between px-4 md:px-8 w-full h-full">
-            <Image src={threadsImg} alt="threadsImg" className="w-[60%] h-full rounded-[26px]"/>
-            <p className="text-2xl md:text-3xl bg-gradient-to-r text-transparent from-green-400 to-blue-500 bg-clip-text w-[30%]">At Brandify, we elevate your online presence with sleek, modern websites and strategic branding. Our focus on quality and innovation ensures your unique identity stands out.  </p>
+    <section className="bg-gradient-to-r from-gray-800 to-black py-20 text-white">
+      <div className="container mx-auto px-4">
+        <h2 className="text-4xl font-extrabold text-center mb-8">About Us</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+          <div>
+            <h3 className="text-2xl font-semibold mb-4">Our Mission</h3>
+            <p className="text-gray-300">
+              At Brandify, our mission is to empower businesses and individuals to grow online by creating personalized and modern websites. We believe in the power of the internet to transform lives and businesses, and we are dedicated to helping our clients achieve their online goals.
+            </p>
+          </div>
+          <div>
+            <h3 className="text-2xl font-semibold mb-4">Our Vision</h3>
+            <p className="text-gray-300">
+              Our vision is to be the leading provider of digital solutions that drive success for our clients. We aim to set the standard for excellence in web design, SEO optimization, and e-commerce solutions, helping businesses thrive in the digital age.
+            </p>
+          </div>
         </div>
-    </div>
-
-    <div className="min-h-screen w-full flex justify-center items-center space-y-7">
-        <div className="md:flex block md:gap-3 space-y-3 md:justify-between px-4 md:px-8 w-full h-full">
-            <p className="text-2xl md:text-3xl bg-gradient-to-r text-transparent from-red-400 to-yellow-500 bg-clip-text w-[45%] mt-5">Our focus on quality and innovation ensures your unique identity stands out. We blend creativity with technology to deliver compelling digital experiences that attract and engage your audience.</p>
-            <Image src={moodMate} alt="threadsImg" className="w-[50%] h-full rounded-[26px]"/>
+        <div className="mt-12 text-center">
+          <h3 className="text-2xl font-semibold mb-4">Meet the Team</h3>
+          <p className="text-gray-300 mb-8">
+            Our team of experts is dedicated to delivering exceptional results. We are passionate about what we do and are committed to helping you succeed.
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
+            <div className="bg-white bg-opacity-20 p-6 rounded-lg shadow-lg">
+              <img src="/p1.jpeg" alt="Subhraneel Goswami" className="w-24 h-24 mx-auto rounded-full mb-4"/>
+              <h4 className="text-xl font-semibold">Subhraneel Goswami</h4>
+              <p className="text-gray-300">Founder & Lead Developer</p>
+            </div>
+            <div className="bg-white bg-opacity-20 p-6 rounded-lg shadow-lg">
+              <img src="/p2.jpeg" alt="Subhamay Dey" className="w-24 h-24 mx-auto rounded-full mb-4"/>
+              <h4 className="text-xl font-semibold">Subhamay Dey</h4>
+              <p className="text-gray-300">Co-Founder</p>
+            </div>
+          </div>
         </div>
-    </div>
-    </>
-  )
+      </div>
+    </section>
+  );
 }
 
-export default AboutUs
+export default AboutUs;
