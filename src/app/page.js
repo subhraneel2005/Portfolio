@@ -25,7 +25,7 @@ export default function Home(){
   },[])
 
   return (
-    <div className="font-sans antialiased bg-gray-100 absolute">
+    <div className="font-sans antialiased bg-gray-100 absolute w-full">
       <Navbar/>
       <main className="mt-20">
         <HeroSection />
