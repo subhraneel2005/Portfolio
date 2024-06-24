@@ -5,6 +5,12 @@ import React from 'react';
 const Portfolio = () => {
   const projects = [
     {
+      name: 'Shopiverse: Ecommerce Website',
+      description: 'Ecommerce platform offering a variety of products for online shopping.',
+      link: 'https://shopiverse-iota.vercel.app/',
+      image: '/shopiverse.png',
+    },
+    {
       name: 'Wholesome Bites',
       description: 'Organic greenhouse website for eco-friendly products and services.',
       link: 'https://wholesome-bites.vercel.app/',
@@ -21,13 +27,7 @@ const Portfolio = () => {
       description: 'Virtual cafe showcasing coffee products and ambiance.',
       link: 'https://coffee-shop-eight-sigma.vercel.app/',
       image: '/coffee.png',
-    },
-    {
-      name: 'Shopiverse: Ecommerce Website',
-      description: 'Ecommerce platform offering a variety of products for online shopping.',
-      link: 'https://shopiverse-iota.vercel.app/',
-      image: '/shopiverse.png',
-    },
+    }
   ];
 
   return (
