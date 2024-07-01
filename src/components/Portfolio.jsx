@@ -5,22 +5,34 @@ import React from 'react';
 const Portfolio = () => {
   const projects = [
     {
+      name: 'SMMA website',
+      description: 'Modern day Social media marketing Website for SMMA Agencies',
+      link: 'https://6682ea28a6c65763f8499837--jazzy-conkies-c734bf.netlify.app/',
+      image: '/glint.png',
+    },
+    {
+      name: 'Roofing website',
+      description: 'Modern day Roofing Website for Roofers to grow their buisness',
+      link: 'https://6682ebfe4a58e065fde79361--glittery-biscuit-59c191.netlify.app/',
+      image: '/roofing.png',
+    },
+    {
       name: 'Shopiverse: Ecommerce Website',
       description: 'Ecommerce platform offering a variety of products for online shopping.',
       link: 'https://shopiverse-iota.vercel.app/',
       image: '/shopiverse.png',
     },
     {
-      name: 'Wholesome Bites',
-      description: 'Organic greenhouse website for eco-friendly products and services.',
-      link: 'https://wholesome-bites.vercel.app/',
-      image: '/wholesome.png',
-    },
-    {
       name: 'Health Coach Website',
       description: 'Website promoting health coaching services and wellness programs.',
       link: 'https://health-coach-website.vercel.app/',
       image: '/health.png',
+    },
+    {
+      name: 'Wholesome Bites',
+      description: 'Organic greenhouse website for eco-friendly products and services.',
+      link: 'https://wholesome-bites.vercel.app/',
+      image: '/wholesome.png',
     },
     {
       name: 'Coffee Shop Website',
