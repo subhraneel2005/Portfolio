@@ -29,9 +29,9 @@ export default function Home(){
       <Navbar/>
       <main className="mt-20">
         <HeroSection />
+        <Portfolio />
         <AboutUs />
         <Services />
-        <Portfolio />
         <ContactUs />
       </main>
 
